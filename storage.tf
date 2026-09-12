@@ -14,8 +14,7 @@ resource "azurerm_storage_share" "employes" {
 }
 
 data "azuread_group" "employes" {
-  display_name     = "employes"
-  security_enabled = true
+  object_id = "9c9a92d7-fb31-4cbc-9202-99d617567575"
 }
 
 resource "azurerm_role_assignment" "employes_smb" {
