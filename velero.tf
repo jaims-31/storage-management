@@ -8,6 +8,6 @@ resource "azurerm_storage_account" "velero" {
 
 resource "azurerm_storage_container" "velero_container" {
   name                  = "velero"
-  storage_account_id    = azurerm_storage_account.velero.id
+  storage_account_name  = azurerm_storage_account.velero.name
   container_access_type = "private"
 }
