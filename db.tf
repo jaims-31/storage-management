@@ -6,6 +6,10 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   administrator_password = var.sql_admin_password
   sku_name               = "B_Standard_B2s"
   version                = "8.0.21"
+
+  lifecycle {
+    ignore_changes = [zone]
+  }
 }
 
 resource "azurerm_mysql_flexible_database" "db" {
