@@ -20,7 +20,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     type = "SystemAssigned"
   }
 
-network_profile {
+  network_profile {
     network_plugin = "kubenet"
     service_cidr   = "10.240.0.0/16"
     dns_service_ip = "10.240.0.10"
